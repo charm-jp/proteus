@@ -11,7 +11,7 @@ import (
 	"gopkg.in/src-d/proteus.v1/protobuf"
 	"gopkg.in/src-d/proteus.v1/report"
 
-	"gopkg.in/urfave/cli.v1"
+	"github.com/urfave/cli"
 )
 
 var (
