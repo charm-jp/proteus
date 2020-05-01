@@ -10,7 +10,7 @@ import (
 	"strings"
 	"sync"
 
-	"gopkg.in/src-d/proteus.v1/report"
+	"github.com/charm-jp/proteus/report"
 
 	"gopkg.in/src-d/go-parse-utils.v1"
 )

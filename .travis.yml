@@ -11,8 +11,8 @@ matrix:
 
 install:
   - mkdir -p $GOPATH/src/gopkg.in/src-d
-  - mv $(pwd) $GOPATH/src/gopkg.in/src-d/proteus.v1
-  - cd $GOPATH/src/gopkg.in/src-d/proteus.v1
+  - mv $(pwd) $GOPATH/src/github.com/charm-jp/proteus
+  - cd $GOPATH/src/github.com/charm-jp/proteus
   - go get -t -v ./...
 
 script:

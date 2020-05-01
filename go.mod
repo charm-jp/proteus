@@ -1,4 +1,4 @@
-module gopkg.in/src-d/proteus.v1
+module github.com/charm-jp/proteus
 
 go 1.13
 

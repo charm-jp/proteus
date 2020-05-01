@@ -1,8 +1,8 @@
 package example
 
 import (
+	"github.com/charm-jp/proteus/example/categories"
 	xcontext "golang.org/x/net/context"
-	"gopkg.in/src-d/proteus.v1/example/categories"
 )
 
 type exampleServiceServer struct {

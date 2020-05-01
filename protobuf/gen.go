@@ -7,7 +7,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"gopkg.in/src-d/proteus.v1/report"
+	"github.com/charm-jp/proteus/report"
 )
 
 // Generator is in charge of generating the .proto files and write them

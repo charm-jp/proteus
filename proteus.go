@@ -1,10 +1,10 @@
 package proteus
 
 import (
-	"gopkg.in/src-d/proteus.v1/protobuf"
-	"gopkg.in/src-d/proteus.v1/resolver"
-	"gopkg.in/src-d/proteus.v1/rpc"
-	"gopkg.in/src-d/proteus.v1/scanner"
+	"github.com/charm-jp/proteus/protobuf"
+	"github.com/charm-jp/proteus/resolver"
+	"github.com/charm-jp/proteus/rpc"
+	"github.com/charm-jp/proteus/scanner"
 )
 
 // Options are all the available options to configure proto generation.

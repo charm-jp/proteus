@@ -5,8 +5,8 @@ import (
 	"strings"
 	"time"
 
-	"gopkg.in/src-d/proteus.v1/example/client"
-	"gopkg.in/src-d/proteus.v1/example/server"
+	"github.com/charm-jp/proteus/example/client"
+	"github.com/charm-jp/proteus/example/server"
 )
 
 func ExampleProteus() {

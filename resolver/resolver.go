@@ -1,10 +1,10 @@
-package resolver // import "gopkg.in/src-d/proteus.v1/resolver"
+package resolver // import "github.com/charm-jp/proteus/resolver"
 
 import (
 	"fmt"
 
-	"gopkg.in/src-d/proteus.v1/report"
-	"gopkg.in/src-d/proteus.v1/scanner"
+	"github.com/charm-jp/proteus/report"
+	"github.com/charm-jp/proteus/scanner"
 )
 
 // Resolver has the responsibility of checking the types of all the packages

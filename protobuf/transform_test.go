@@ -6,11 +6,11 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/charm-jp/proteus/report"
+	"github.com/charm-jp/proteus/resolver"
+	"github.com/charm-jp/proteus/scanner"
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
-	"gopkg.in/src-d/proteus.v1/report"
-	"gopkg.in/src-d/proteus.v1/resolver"
-	"gopkg.in/src-d/proteus.v1/scanner"
 )
 
 func TestToLowerSnakeCase(t *testing.T) {
@@ -715,14 +715,14 @@ func (s *TransformerSuite) TestTransform() {
 	pkg := s.t.Transform(pkgs[0])
 
 	s.Equal("gopkg.in.srcd.proteus.v1.fixtures", pkg.Name)
-	s.Equal("gopkg.in/src-d/proteus.v1/fixtures", pkg.Path)
+	s.Equal("github.com/charm-jp/proteus/fixtures", pkg.Path)
 	s.Equal(NewStringValue("foo"), pkg.Options["go_package"])
 	s.Equal(NewLiteralValue("false"), pkg.Options["(gogoproto.sizer_all)"])
 	s.Equal(NewLiteralValue("true"), pkg.Options["(gogoproto.protosizer_all)"])
 	s.Equal([]string{
 		"github.com/gogo/protobuf/gogoproto/gogo.proto",
 		"google/protobuf/timestamp.proto",
-		"gopkg.in/src-d/proteus.v1/fixtures/subpkg/generated.proto",
+		"github.com/charm-jp/proteus/fixtures/subpkg/generated.proto",
 	}, pkg.Imports)
 	s.Equal(1, len(pkg.Enums))
 	s.Equal(5, len(pkg.Messages))
@@ -730,7 +730,7 @@ func (s *TransformerSuite) TestTransform() {
 
 	pkg = s.t.Transform(pkgs[1])
 	s.Equal("gopkg.in.srcd.proteus.v1.fixtures.subpkg", pkg.Name)
-	s.Equal("gopkg.in/src-d/proteus.v1/fixtures/subpkg", pkg.Path)
+	s.Equal("github.com/charm-jp/proteus/fixtures/subpkg", pkg.Path)
 	s.Equal(NewStringValue("subpkg"), pkg.Options["go_package"])
 	s.Equal([]string{"github.com/gogo/protobuf/gogoproto/gogo.proto"}, pkg.Imports)
 	s.Equal(0, len(pkg.Enums))
@@ -858,7 +858,7 @@ func mkDocs(doc ...string) scanner.Docs {
 	}
 }
 
-const project = "gopkg.in/src-d/proteus.v1"
+const project = "github.com/charm-jp/proteus"
 
 func projectPath(pkg string) string {
 	return filepath.Join(project, pkg)

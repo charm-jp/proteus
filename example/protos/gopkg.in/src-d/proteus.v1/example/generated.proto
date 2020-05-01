@@ -3,7 +3,7 @@ package gopkg.in.srcd.proteus.v1.example;
 
 import "github.com/gogo/protobuf/gogoproto/gogo.proto";
 import "google/protobuf/timestamp.proto";
-import "gopkg.in/src-d/proteus.v1/example/categories/generated.proto";
+import "github.com/charm-jp/proteus/example/categories/generated.proto";
 import "google/protobuf/duration.proto";
 
 option (gogoproto.protosizer_all) = true;
